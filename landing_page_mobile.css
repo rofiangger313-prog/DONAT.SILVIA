@@ -1,0 +1,97 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+
+/* header */
+.mobile-mode {
+    display: flex; flex-direction: column; gap: 20px;
+}
+/* main */
+.HOME-BUTTON{
+    position: fixed; top: 100%; left: 90%; transform: translate(-50%, -50%); text-decoration: none; color: black; padding: 24px; border-radius: 50%; transition: 0.3s ease-in-out
+
+}
+/* hero-container */
+.hero-container{
+    width: 100%; padding: 0; background-image: url(assets/bc.png); background-repeat: no-repeat; background-size: contain; background-position: center; height: auto; padding: 50px; margin: 0; background-color: var(--hero-button);
+}
+.title h1{
+    font-size: 50px; padding-left: 10px;
+}
+.title small{
+    font-size: 20px; font-weight: bold; padding-left: 20px;
+}
+.container-button-CTA{
+    display: felx; width: 30%; margin-left: 10px; padding: 10px;
+}
+/* end hero-container */
+
+/* Category-Product */
+.container-product{
+    margin: 0; padding: 0; background-image: url(assets/pattenr-produk-unggulan.png); background-repeat: no-repeat; background-size: cover; background-position: center;
+}
+.product-title > h1{
+    display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; 
+}
+.grid-for-picture-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px; 
+}
+
+.container-product-box {
+    width: 100%;
+    margin: 0 auto;         /* Centering cadangan */
+    text-align: center;
+}
+
+.container-product-box img {
+    width: 100%;            /* Gambar ngikutin lebar box */
+    height: auto;
+    border-radius: 15px;
+}
+.container-product-box h2{
+    display: flex; 
+}
+.container-product-box h3{
+    padding: 10px 10px 10px 12px; width: 100%; transition: 0.3s ease-in-out; cursor: default;
+
+}
+/* why-use-me? */
+.why-use-me{
+    margin: 0; padding: 20px;
+}
+.why-use-me > h1{
+    display: flex; flex-direction: column; justify-content: center; align-items: stretch;
+
+}
+.grid-for-why-us{
+    display: grid; grid-template-columns:repeat(1,1fr); gap: 20px; justify-items: flex-start; width: 100%;
+}
+/* INFO-KESEHATAN */
+.container-info-kesehatan{
+    padding: 20px;
+}
+.box-info-kesehatan{
+    display: flex; justify-content: space-between; align-items: center; flex-direction: column;
+}
+.info{
+    order: 2;
+}
+.img{
+    order: 1;
+}
+/* Testimoni */
+.container-testimoni{
+    padding: 20px;
+}
+.testimoni{
+    padding-left: 20px;
+}
+.grid-testimoni{
+    display: grid; grid-template-columns: repeat(1,1fr); gap: 20px;
+
+}
