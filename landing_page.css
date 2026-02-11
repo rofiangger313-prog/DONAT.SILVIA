@@ -4,192 +4,307 @@
     --hero-button : #ff6b9d;
     --highlight : #ffd93d;
     --aksen : #9ade7b;
+    
+    /* BOX SHADOW VARIABLES */
+    --shadow-background: 0 4px 15px rgba(255, 248, 227, 0.4);
+    --shadow-teks: 0 4px 12px rgba(77, 44, 44, 0.3);
+    --shadow-hero-button: 0 6px 20px rgba(255, 107, 157, 0.4);
+    --shadow-highlight: 0 5px 18px rgba(255, 217, 61, 0.5);
+    --shadow-aksen: 0 5px 18px rgba(154, 222, 123, 0.4);
 }
-
 html{
     scroll-behavior: smooth;
 }
-.HOME-BUTTON{
-    position: fixed; top: 90%; left: 96%; transform: translate(-50%, -50%); text-decoration: none; color: black; background-color: var(--aksen); padding: 40px; border-radius: 50%; transition: 0.3s ease-in-out; outline: none; border: none; background-image: url(assets/arrow-up-solid.svg); width: 24px; height: auto; background-repeat: no-repeat; background-size: 20px; background-position: center;
-}
-.HOME-BUTTON:hover{
-    background-color: var(--aksen);
-
-}
 *{
-    padding: 0; margin: 0; box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 body{
     background-color: var(--background);
 }
 header{
-    background-color: var(--hero-button); padding: 10px;
-}
-
-.header-container{
-    display: flex; justify-content: space-between; align-items: center;
-}
-.BUTTON-CTA a{
-    text-decoration: none; color: var(--teks); background-color: var(--hero-button); padding: 10px; border-radius: 12px; outline: none; border: none; transition: 0.3s ease-in-out; font-weight: bold;
-}
-.BUTTON-CTA a:hover{
     background-color: var(--aksen);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
-.hero-container{
-    background-image: url(assets/bc.png); background-repeat: no-repeat; background-size: cover; background-position: center; height: 99vh; padding: 50px; margin: 0; background-color: var(--hero-button);
-}
-.title{
-    justify-content: center; align-items: center; width: 100%; padding: 10% 0% 5% 0%; animation: Muncul 1s ease-in-out forwards;
-}
-.container-button-CTA{
-    display: flex; justify-content: flex-start; align-items: center; gap: 10px; padding: 10px 10px 10px 20px; background-color: green; border-radius: 12px; width: 15%; animation: Muncul 0.9s ease-in-out forwards; animation-delay: 0.5s; opacity: 0; transition: 0.5s ease-in-out;
-}
-.container-button-CTA:hover{
-    background-color: var(--aksen);
-}
-.container-button-CTA:hover{
-    background-color: var(--aksen);
-}
-.button-CTA-SVG{
-    width: 24px; height: auto; background-color: transparent;
-}
-.title h1{
-    font-size: 80px;
-}
-/* Animation */
-@keyframes Muncul{
-    0%{
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-/* Animation */
-
-.title small{
-    font-size: 40px; background-color: rgba(255, 107, 157, 0.5); border-radius: 12px; padding: 10px;
-}
-.buttonCTA{
-    text-decoration: none; color: var(--background); animation: Muncul 1s ease-in-out forwards; animation-delay: 0.5s; opacity: 0;
-}
-/* Category-product */
-.reveal{
-    opacity: 0; transform: translateY(60px); transition: all 5s cubic-bezier(0.175, 0.885, 0.32, 1.275); visibility: hidden;
-}
-.reveal.active{
-    opacity: 1; transform: translateY(0); visibility: visible;
-}
-.container-product{
-    margin: 0; background-image: url(assets/pattenr-produk-unggulan.png); background-repeat: no-repeat; background-size: cover; background-position: center;
-}
-.product-title{
-    padding: 100px;
-}
-.product-title h1{
-    font-size: 50px; margin-bottom: 20px; color: var(--teks); box-shadow: 2px 2px 10px rgba(255, 107, 157, 0.5); width: 100%; border-radius: 12px;
-}
-.container-product-box{
-    border-radius: 12px; width: 100%; overflow: hidden; transition: 0.3s ease-in-out; outline: none; background-color: white;
-    
-}
-.container-product-box:hover{
-    box-shadow: 2px 2px 10px rgba(255, 107, 157, 0.5); transform: scale(0.95); padding: 10px;
-}
-.container-product-box > img{
+.BTN-HEADER a{
+    text-decoration: none;
+    color: black;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
     transition: 0.3s ease-in-out;
 }
-.container-product-box:hover > img{
-    border-radius: 12px; background-color: rgba(0, 0, 0, 0.5);
+.BTN-HEADER a:hover{
+    background-color: var(--highlight);
 }
-.container-product-box:hover > h3{
-    background-color: transparent;
+.hero{
+    padding: 10px; height: 90vh; background-repeat: no-repeat; background-size: cover; background-image: url(assets/bc.png); background-color: var(--aksen); background-position: center;
 }
-img{
-    width: 100%; background-color: rgba(255, 107, 157, 0.5);
+.title{
+    display: flex; flex-direction: column; gap: 10px; justify-content: center; align-items: left; margin: 100px 0px 0px 20px; color: var(--teks); font-size: 30px;
 }
-.container-product-box h2{
-    width: 100%; padding: 10px; cursor: default;
+.CTA-Button-WA{
+    margin-top: 5%;
 }
-.container-product-box h3{
-    padding: 10px 10px 10px 12px; width: 100%; transition: 0.3s ease-in-out; cursor: default;
+.CTA-Button-WA a{
+    text-decoration: none; color: var(--teks); background-color: var(--hero-button); padding: 10px; border-radius: 10px; transition: 0.3s ease-in-out;
+}
+.CTA-Button-WA a:hover{
+    background-color: var(--highlight);
+}
+/* Container Product */
+.container-product{
+    width: 100%;
+    padding: 40px; background-color: var(--highlight); 
+}
+.container-product h1{
+    text-align: left; font-size: 50px;  color: var(--teks); margin: 15px;
+}
+.grid-produk-keunggulan{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 10px; padding: 50px;
+}
+.produk-keunggulan{
+    width: 100%; /* TAMBAHKAN INI */
+    transition: 0.3s ease-in-out;
+}
+.produk-keunggulan:hover{
+    padding: 10px;
+}
+/* Ketika Card di-hover, Gambar berubah (misal: jadi lebih besar/zoom) */
+.produk-keunggulan:hover img {
+    border-radius: 12px;
+    transition: 0.5s ease-in-out;
+}
 
+/* Ketika Card di-hover, Text H2 berubah warna */
+.produk-keunggulan:hover h2 {
+    color: var(--hero-button); /* Pakai variabel warna lu */
+    transform: translateX(5px); /* Geser dikit ke kanan */
+    transition: 0.3s ease-in-out;
 }
-.grid-for-picture-product{
-    display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;
-    justify-self: center; padding: 50px; box-shadow: 2px 2px 10px rgba(255, 107, 157, 0.5); border-radius: 12px; background-color: var(--background);
+
+/* Ketika Card di-hover, Text H3 berubah */
+.produk-keunggulan:hover h3 {
+    color: var(--teks);
+    opacity: 0.8;
 }
-.detail-product{
-    margin-top: 20px;
+.produk-keunggulan{
+    box-shadow: var(--shadow-teks); /* perbaiki dari 1.1 jadi 0.1 */
+    border-radius: 10px;
+    width: 100%; /* TAMBAHKAN INI */
+    overflow: hidden; /* TAMBAHKAN INI untuk prevent overflow */
+    background-color: var(--shadow-aksen);
 }
-.detail-product a{
-    text-decoration: none; color: var(--teks); font-weight: bold; padding: 20px; border-radius: 12px; box-shadow: 2px 2px 10px rgba(255, 107, 157, 0.5);  transition: 0.3s ease-in-out;
-}
-.detail-product a:hover{
+
+
+/* Tambahkan ini untuk elemen di dalam card */
+.produk-keunggulan img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
     background-color: var(--aksen);
+    transition: 0.3s ease-in-out;
 }
-/* end product */
-
-/* why-use-me? */
-.container-why-us{
-    background-color: var(--highlight); margin: 0;
+.produk-keunggulan h2, .produk-keunggulan h3{
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+    
 }
-.why-use-me{
-    margin: 10px; padding: 20px;
+.produk-keunggulan a{
+    text-decoration: none;
+    background-color: transparent;
+    color: black;
+    transition: 0.3s ease-in-out; padding: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border: 2px;
 }
-.why-use-me h1{
-    margin: 0px 0px 50px 0px; font-size: 50px;
-}
-.grid-for-why-us{
-    display: grid; grid-template-columns:repeat(3,1fr); gap: 20px;
-}
-.container-why-us-box{
-    display: flex; flex-direction: column; padding: 20px; background-color: var(--background); border-radius: 12px; transition: 0.3s ease-in-out; border-left: solid 10px var(--aksen); cursor: default;
-}
-.container-why-us-box:hover{
-    box-shadow: 2px 2px 10px rgba(255, 107, 157, 0.5); background-color: var(--aksen); color: var(--teks);
-}
-/* info-kesehatan */
-.container-info-kesehatan{
-     padding: 50px;
-}
-.info-kesehatan{
-    box-shadow: 2px 2px 10px rgba(255, 107, 157, 0.5); padding: 40px; border-radius: 12px;
-}
-.box-info-kesehatan{
-    display: flex; justify-content: center; align-items: center; padding: 20px; gap: 50px;
+.produk-keunggulan a:hover{
+    background-color: var(--aksen);
+    color: var(--teks);
 }
 
-/* testimoni */
-.container-testimoni{
-    padding: 50px;
-}
-.testimoni{
-    margin-bottom: 20px;
-}
-.grid-testimoni{
-    display: grid; grid-template-columns: repeat(2,1fr); gap: 20px;
-}
-.pict{
-    border-radius: 50%; width: 50px; height: 50px;
-}
-.box-testimoni{
-    display: flex; justify-content: space-between; align-items: stretch; padding: 20px; gap: 20px; box-shadow: 2px 2px 10px rgba(255, 107, 157, 0.5); border-radius: 12px;
-}
 
-/* Get-contact */
-.GET-Contact{
-    padding: 20px; box-shadow: 2px 2px 10px rgba(255, 107, 157, 0.5); border-top-left-radius: 12px; border-top-right-radius: 12px; background-color: var(--teks); color: var(--background); margin: 0;
-}
-.contact{
-    display: flex;flex-direction: column;
-}
-.box-contact{
-    display: flex; justify-content: space-between; align-items: center; padding: 20px
-}
-.box-contact a{
-    text-decoration: none; color: var(--highlight);
+@media (max-width: 768px){
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        gap: 20px;
+        background-color: var(--hero-button);
+    }
+    .BTN-HEADER a{
+        text-decoration: none;
+        background-color: transparent;
+        color: black;
+        transition: 0.3s ease-in-out;
+    }
+    .BTN-HEADER a:hover{
+        background-color: black;
+        color: white;
+    }
+    /* hero */
+    .hero{
+        padding: 10px; height: 80vw; background-repeat: no-repeat; background-size: auto; background-image: url(assets/background-mobile.png); background-color: var(--hero-button); background-position: calc(5px);
+
+    }
+    .title{
+        display: flex; flex-direction: column; gap: 10px; justify-content: center; align-items: center; margin: 10%; margin-top: 20%; color: var(--teks); font-size: 24px;
+    }
+    .title small{
+        display: flex; text-align: center; gap: 10px
+    }
+    .CTA-Button-WA{
+        margin-top: 10%;
+    }
+    .CTA-Button-WA a{
+        text-decoration: none; color: var(--teks); background-color: var(--hero-button); padding: 10px; border-radius: 10px; transition: 0.3s ease-in-out; box-shadow: var(--shadow-highlight);
+    }
+    .CTA-Button-WA a:hover{
+        background-color: var(--highlight);
+    }
+
+    /* Cateogry Product */
+    .container-product{
+        padding: 10px; background-color: var(--background); 
+    }
+    .container-product h1{
+        text-align: center; font-size: 30px; color: var(--teks); margin: 15px;
+    }
+    .grid-produk-keunggulan{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin: 10px; padding: 0;
+    }
+    .produk-keunggulan {
+        /* Gunakan background putih/krem terang agar gambar donat lebih 'pop up' */
+        background-color: #ffffff; 
+        box-shadow: var(--shadow-teks); 
+        border-radius: 15px; /* Lebih bulat biar dapet kesan 'fun' */
+        width: 100%;
+        overflow: hidden;
+        transition: 0.3s ease-in-out;
+        border: 1px solid rgba(45, 27, 27, 0.05); /* Border tipis biar pro */
+    }
+    
+    .produk-keunggulan:hover {
+        transform: translateY(-5px); /* Efek melayang */
+        box-shadow: 0 10px 25px rgba(45, 27, 27, 0.1);
+    }
+    
+    /* Tambahkan ini untuk elemen di dalam card */
+    .produk-keunggulan img{
+        width: 100%;
+        height: auto;
+        margin-bottom: 0px;
+        background-color: var(--aksen);
+        padding: 20px;
+    }
+    .produk-keunggulan h2, .produk-keunggulan h3{
+        padding: 15px 20px;
+    }
+    .produk-keunggulan a {
+        display: inline-block;
+        margin: 0 0 20px 20px; /* Kasih jarak dari pinggir card */
+        text-decoration: none;
+        background-color: var(--hero-button); /* Tombol pink (Fun) */
+        color: white; /* Teks putih biar kebaca jelas */
+        font-weight: bold;
+        transition: 0.3s ease-in-out; 
+        padding: 10px 20px; 
+        border-radius: 8px; /* Sudut tombol lebih konsisten */
+    }
+    .produk-keunggulan a:hover {
+        background-color: var(--aksen); /* Berubah jadi hijau pas hover (Healthy vibe) */
+        color: white;
+        transform: scale(1.05);
+    }
+    /* Testimoni */
+    .container-why-us{
+        padding: 40px 10px; background-color: var(--background); 
+    }
+    .container-why-us h1{
+        text-align: center; font-size: 28px; color: var(--teks); margin: 15px;
+    }
+    .grid-for-why-us{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin: 0px; padding: 50px;
+    }
+    .container-why-us-box {
+        width: 100%; 
+        background-color: white; /* Putih bersih biar icon & teks menonjol */
+        padding: 25px 20px;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; /* Center semua isi box */
+        text-align: center;
+        gap: 12px; 
+        border-radius: 15px;
+        box-shadow: var(--shadow-teks); /* Shadow halus di tiap box */
+        transition: 0.3s ease-in-out;
+        border-bottom: 4px solid var(--highlight); /* Kasih aksen kuning di bawah */
+    }
+    
+    .container-why-us-box:hover {
+        transform: translateY(-5px);
+        border-bottom: 4px solid var(--aksen); /* Berubah jadi hijau pas diintip */
+    }
+    
+    /* Styling buat judul di dalam box (misal: "Freshly Made") */
+    .container-why-us-box h2 {
+        font-size: 20px;
+        color: var(--teks);
+        margin: 0;
+    }
+    
+    /* Styling buat deskripsi di dalam box */
+    .container-why-us-box p {
+        font-size: 16px;
+        color: var(--teks);
+        opacity: 0.9;
+        line-height: 1.4;
+    }
+    /* container-info-kesehatan */
+    .container-info-kesehatan{
+        padding: 10px; background-color: var(--background); 
+    }
+    .box-info-kesehatan{
+        padding: 10px; display: flex; flex-direction: column;
+    }
+    .box-info-kesehatan h1{
+        text-align: left; font-size: 26px; color: var(--teks); margin: 15px; line-height: 1.2;
+    
+    }
+    .info{
+        order: 2; padding: 10px;
+    }
+    .info h2{
+        font-size: 18px; text-align: left; margin-top: 20px;padding: 10px; border-radius: 12px; background-color: var(--background); box-shadow: var(--shadow-teks);
+    }
+    .info ul{
+        padding: 20px 10px 20px 30px;
+    }
+    .info ul li {
+        list-style-type: disc;
+        color: var(--teks);
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    .img{
+        order: 1; width: 100%; display: flex; justify-content: center; overflow: hidden;
+    }
+    .img img{
+        width: 100%; max-width: 500px; height: auto; border-radius: 20px; object-fit: cover; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 }
