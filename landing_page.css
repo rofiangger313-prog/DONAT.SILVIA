@@ -132,6 +132,27 @@ header{
 
 
 @media (max-width: 768px){
+    @keyframes Muncul {
+        0%{
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes MunculHeader {
+        0%{
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1);
+        }
+    
+    }
     header{
         display: flex;
         flex-direction: column;
@@ -153,20 +174,21 @@ header{
     }
     /* hero */
     .hero{
-        padding: 10px; height: 80vw; background-repeat: no-repeat; background-size: auto; background-image: url(assets/background-mobile.png); background-color: var(--hero-button); background-position: calc(5px);
+        padding: 10px; height: 80vw; background-repeat: no-repeat; background-size: auto; background-image: url(assets/background-mobile.png); background-color: var(--hero-button); background-position: calc(5px); 
+    
 
     }
     .title{
-        display: flex; flex-direction: column; gap: 10px; justify-content: center; align-items: center; margin: 10%; margin-top: 20%; color: var(--teks); font-size: 24px;
+        display: flex; flex-direction: column; gap: 10px; justify-content: center; align-items: center; margin: 10%; margin-top: 20%; color: var(--teks); font-size: 24px; animation: MunculHeader 1s ease-in-out forwards;
     }
     .title small{
-        display: flex; text-align: center; gap: 10px
+        display: flex; text-align: center; gap: 10px; animation: MunculHeader 1s ease-out 0.4s backwards; 
     }
     .CTA-Button-WA{
         margin-top: 10%;
     }
     .CTA-Button-WA a{
-        text-decoration: none; color: var(--teks); background-color: var(--hero-button); padding: 10px; border-radius: 10px; transition: 0.3s ease-in-out; box-shadow: var(--shadow-highlight);
+        text-decoration: none; color: var(--teks); background-color: var(--hero-button); padding: 10px; border-radius: 10px; transition: 0.3s ease-in-out; box-shadow: var(--shadow-highlight); animation: Muncul 0.5s ease-out 1s backwards;
     }
     .CTA-Button-WA a:hover{
         background-color: var(--highlight);
@@ -194,6 +216,14 @@ header{
         overflow: hidden;
         transition: 0.3s ease-in-out;
         border: 1px solid rgba(45, 27, 27, 0.05); /* Border tipis biar pro */
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease-out;
+    }
+    .produk-keunggulan.active{
+        opacity: 1;
+        transform: translateY(0);
+    
     }
     
     .produk-keunggulan:hover {
@@ -306,5 +336,41 @@ header{
     }
     .img img{
         width: 100%; max-width: 500px; height: auto; border-radius: 20px; object-fit: cover; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    /* Testimoni */
+    .container-testimoni{
+        padding: 50px;
+    }
+    .testimoni{
+        margin-bottom: 20px;
+    }
+    .grid-testimoni{
+        display: grid; grid-template-columns: repeat(1,1fr); gap: 20px;
+    }
+    .pict{
+        border-radius: 50%; width: 50px; height: 50px;
+    }
+    .box-testimoni{
+        display: flex; justify-content: space-between; align-items: stretch; padding: 20px; gap: 20px; box-shadow: 2px 2px 10px rgba(255, 107, 157, 0.5); border-radius: 12px;
+    }
+    /* Get-contact */
+    /* Get-contact */
+    .GET-Contact{
+        padding: 20px; box-shadow: 2px 2px 10px rgba(255, 107, 157, 0.5); border-top-left-radius: 12px; border-top-right-radius: 12px; background-color: var(--teks); color: var(--background); margin: 0;
+    }
+    .article-contact{
+        display: flex; flex-direction: column; gap: 10px; margin: 10px;
+    }
+    .logo,.box-contact{
+        display: flex; align-items: center; gap: 10px;
+    }
+    .logo img,.box-contact img{
+        width: 5%;
+    }
+    .logo a, .box-contact a{
+        text-decoration: none; color: white;
+    }
+    .box-contact p{
+        font-size: 14px;
     }
 }
